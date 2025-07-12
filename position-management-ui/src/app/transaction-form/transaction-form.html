@@ -1,0 +1,17 @@
+<h2>Submit Transaction</h2>
+<form (ngSubmit)="submitTransaction()" #txnForm="ngForm">
+  <input type="number" [(ngModel)]="transaction.tradeId" name="tradeId" placeholder="Trade ID" required />
+  <input type="number" [(ngModel)]="transaction.version" name="version" placeholder="Version" required />
+  <input type="text" [(ngModel)]="transaction.securityCode" name="securityCode" placeholder="Security Code" required />
+  <input type="number" [(ngModel)]="transaction.quantity" name="quantity" placeholder="Quantity" required />
+  <select [(ngModel)]="transaction.action" name="action" required>
+    <option value="INSERT">INSERT</option>
+    <option value="UPDATE">UPDATE</option>
+    <option value="CANCEL">CANCEL</option>
+  </select>
+  <select [(ngModel)]="transaction.buySell" name="buySell" required>
+    <option value="BUY">BUY</option>
+    <option value="SELL">SELL</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>

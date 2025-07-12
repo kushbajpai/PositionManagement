@@ -1,0 +1,11 @@
+<h2>Current Positions</h2>
+<table border="1">
+  <tr>
+    <th>Security Code</th>
+    <th>Quantity</th>
+  </tr>
+  <tr *ngFor="let key of getKeys(positions)">
+    <td>{{ key }}</td>
+    <td>{{ positions[key] }}</td>
+  </tr>
+</table>
