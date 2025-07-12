@@ -18,4 +18,6 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     @Transactional
     @Query("UPDATE Transaction t SET t.quantity = t.quantity + :qty WHERE t.securityCode = :code")
     void adjustPosition(@Param("code") String code, @Param("qty") int qty);
+
+    Optional<Transaction> findBySecurityCode(String securityCode);
 }

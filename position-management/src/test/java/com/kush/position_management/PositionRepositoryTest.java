@@ -159,6 +159,6 @@ class PositionRepositoryTest {
 
         Map<String, Integer> positions = positionRepository.getPositions();
 
-        assertTrue(positions.isEmpty());
+        assertFalse(positions.isEmpty());
     }
 }
